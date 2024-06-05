@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('travelbg.jpeg'); /* Adjust the path to your background image */
+  background-size: cover;
+  background-position: center;
+  }
+  
+  header {
+    background-color: #007bff;
+  }
+  
+  /* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .containernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed 
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+  } 
+  
+  .logo {
+    margin-right: 10px;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+  .flex-container {
+    display: flex;
+  }
+
+  
+  .flex-container video {
+    margin-right: 20px; /* Adjust as needed 
+  }
+  .agency-name {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  */
+
+  .navbar {
+    background-color: #333; /* Change to desired background color */
+    color: #fff; /* Change to desired text color */
+  }
+  
+  .containernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding as needed */
+  }
+  
+  .logo-title {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 50px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adjust margin as needed */
+  }
+  
+  .agency-name {
+    font-size: 1.2em; /* Adjust font size as needed */
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px; /* Adjust spacing between links as needed */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff; /* Change to desired text color */
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .flex-container video {
+    margin-right: 20px;  
+    display: block;
+  
+  }
+  .flex-container {
+    display: flex;
+  }
+  .agency-name {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .container h1 {
+    margin-top: 0;
+  }
+  
+  .container form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  footer {
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .container3 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .offer-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .offer-wrapper {
+    display: flex;
+  }
+  
+  .offer {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust width as needed */
+    margin-right: 20px;
+  }
+  
+  .offer img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .offer-details {
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: greenyellow;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    
+  }
+  
+  .btn:hover {
+    background-color: red;
+  }

@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image:url("bgimg.jpg");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+    .login-container {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+       
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: navajowhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login_form button{
+    opacity: .5;
+  }
+  .login_form button{
+    opacity: .5;
+  }
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image:url("travelbg.jpeg");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+    .login-container {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+
+.logo {
+    width: 73px;
+    height: 71px;
+}
+
+.title {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: navajowhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}

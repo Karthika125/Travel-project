@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3f4f6; /* Light gray background */
+    background-image: url('travelbg.jpeg');
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  select,
+  input[type="number"] {
+    border: 1px solid #e5e7eb; /* Light gray border */
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  #totalPrice {
+    background-color: #f3f3f3; /* Light gray background */
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  /* Styling for landmark images */
+  .landmark-img {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  }
