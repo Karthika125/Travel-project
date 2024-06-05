@@ -1,0 +1,115 @@
+SIGNNN UPP
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1>SIGN UP</h1>
+    <div class="border-2 bg-red-200 w-1/3 ">
+    <form action="">
+        <label for="NAME">USERNAME</label><br>
+        <input class="border-2" type="text" name="NAME" id="NAME">
+        <div id="output"></div><br><br>
+        
+        <label>GENDER:</label><br><br>
+        <label for="male">
+            <input type="radio" name="gender" value="male" id="male">
+            Male
+        </label><br>
+        <label for="female">
+            <input type="radio" name="gender" value="female" id="female">
+            Female
+        </label><br>
+        <label for="other">
+            <input type="radio" name="gender" value="other" id="other">
+            Other
+        </label><br><br>
+        
+        <label for="EMAIL">EMAIL</label><br>
+        <input class="border-2" type="email" name="EMAIL" id="EMAIL"><br><br>
+        
+        <label for="PASSWORD">PASSWORD</label><br>
+        <input class="border-2" type="password" name="PASSWORD" id="PASSWORD"><br><br>
+        
+        <!-- Error message div -->
+        <div id="errorMessage" class="text-red-500"></div>
+        
+        <button type="button" onclick="printt()">Submit</button></form><br>
+
+        <!-- <button type="button" onclick="checkLogin()">LOGIN</button> -->
+
+        <button type="button" onclick="redirect()">Proceed to login </button>
+    </form>
+</div>
+    <script>
+        function redirect()
+    {
+        window.location.href = 'loginn.html';
+    }
+        var usersData = [];
+
+        function printt() {
+            var Name = document.getElementById('NAME').value;
+           
+
+            var Email = document.getElementById('EMAIL').value;
+            var Password = document.getElementById('PASSWORD').value;
+
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+            // Check if user with the same username, email, and password already exists
+            var userExists = usersData.some(function(user) {
+                return user.username === Name || user.mailid === Email || user.PASSWORD === Password;
+              
+            });
+
+            if (userExists) {
+                document.getElementById('errorMessage').textContent = 'User with the same username, email, or password already exists!';
+                return; // Exit function if user already exists
+            }
+
+            const user = {
+                username: Name,
+                mailid: Email,
+                PASSWORD: Password,
+                Gender: gender,
+            };
+
+            console.log("entered data is", user);
+
+            usersData.push(user);
+
+            localStorage.setItem("users", JSON.stringify(usersData));
+        }
+
+        // function checkLogin() {
+        //     var storedData = localStorage.getItem("users");
+        //     if (storedData) {
+        //         var usersData = JSON.parse(storedData);
+        //         var enteredUsername = document.getElementById('NAME').value;
+        //         var enteredPassword = document.getElementById('PASSWORD').value;
+                
+        //         var userFound = usersData.find(function(user) {
+        //             return user.username === enteredUsername && user.PASSWORD === enteredPassword;
+        //         });
+
+        //         if (userFound) {
+        //             console.log("Login successful!");
+        //             document.getElementById('errorMessage').textContent = ''; // Clear any previous error message
+        //         } else {
+        //             console.log("Invalid username or password!");
+        //             document.getElementById('errorMessage').textContent = 'Invalid username or password!';
+        //         }
+        //     } else {
+        //         console.log("No user data found. Please sign up first.");
+        //     }
+        // }
+    </script>
+</body>
+</html>
