@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1>SIGN UP</h1>
+    <div class="border-2 bg-red-200 w-1/3">
+      <form action="">
+        <label for="NAME">USERNAME</label><br />
+        <input class="border-2" type="text" name="NAME" id="NAME" />
+        <div id="output"></div>
+        <br /><br />
+
+        <label>GENDER:</label><br /><br />
+        <label for="male">
+          <input type="radio" name="gender" value="male" id="male" />
+          Male </label
+        ><br />
+        <label for="female">
+          <input type="radio" name="gender" value="female" id="female" />
+          Female </label
+        ><br />
+        <label for="other">
+          <input type="radio" name="gender" value="other" id="other" />
+          Other </label
+        ><br /><br />
+
+        <label for="EMAIL">EMAIL</label><br />
+        <input
+          class="border-2"
+          type="email"
+          name="EMAIL"
+          id="EMAIL"
+        /><br /><br />
+
+        <label for="PASSWORD">PASSWORD</label><br />
+        <input
+          class="border-2"
+          type="password"
+          name="PASSWORD"
+          id="PASSWORD"
+        /><br /><br />
+
+        <!-- Error message div -->
+        <div id="errorMessage" class="text-red-500"></div>
+
+        <button type="button" onclick="printt()">Submit</button><br />
+
+        <!-- <button type="button" onclick="checkLogin()">LOGIN</button> -->
+
+        <button type="button" onclick="redirect()">Proceed to login</button>
+      </form>
+    </div>
+    <script src="signup.js"></script>
+  </body>
+</html>

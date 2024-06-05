@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1>LOGINNN</h1>
+    <div class="border-2 bg-red-200 w-1/3">
+      <form action="">
+        <label for="NAME">USERNAME</label><br />
+        <input class="border-2" type="text" name="NAME" id="NAME" />
+        <div id="output"></div>
+        <br /><br />
+        <label for="EMAIL">EMAIL</label><br />
+        <input
+          class="border-2"
+          type="email"
+          name="EMAIL"
+          id="EMAIL"
+        /><br /><br />
+
+        <label for="PASSWORD">PASSWORD</label><br />
+        <input
+          class="border-2"
+          type="password"
+          name="PASSWORD"
+          id="PASSWORD"
+        /><br /><br />
+
+        <div id="errorMessage" class="text-red-500"></div>
+
+        <button type="button" onclick="checkLogin()">LOGIN</button>
+      </form>
+    </div>
+    <script>
+      var userslogData = [];
+
+      function printt() {
+        var Name = document.getElementById("NAME").value;
+
+        var Email = document.getElementById("EMAIL").value;
+        var Password = document.getElementById("PASSWORD").value;
+
+        // Check if user with the same username, email, and password already exists
+        var userExists = usersData.some(function (user) {
+          return user.username === Name || user.mailid === Email;
+        });
+
+        if (userExists) {
+          document.getElementById("errorMessage").textContent =
+            "User with the same username, email, or password already exists!";
+          return; // Exit function if user already exists
+        }
+
+        const user = {
+          username: Name,
+          mailid: Email,
+        };
+
+        console.log("entered data is", user);
+
+        userslogData.push(user);
+
+        localStorage.setItem("users", JSON.stringify(userslogData));
+      }
+
+      function checkLogin() {
+        var storedData = localStorage.getItem("users");
+        if (storedData) {
+          var userslogData = JSON.parse(storedData);
+          console.log(userslogData);
+          var enteredUsername = document.getElementById("NAME").value;
+          var enteredPassword = document.getElementById("PASSWORD").value;
+          var enteredmail = document.getElementById("EMAIL").value;
+
+          var key = 0;
+
+          //   using find
+            var userFound = userslogData.some(function (user) {
+              return user.mailid === enteredmail && user.PASSWORD === enteredPassword
+            })
+
+            console.log(userFound)
+            if(userFound){
+                console.log("Login successful!");
+                window.location.href = "webpage.html";
+            }
+            else{
+                console.log("Invalid username nd pwd !");
+            document.getElementById("errorMessage").textContent =
+              "Invalid username or pwd";
+            }
+
+          // using map
+        //   var userFound = userslogData.map( (user) => {
+        //     console.log(key);
+        //     if (
+        //       user.username === enteredUsername &&
+        //       user.PASSWORD === enteredPassword
+        //     ) {
+        //       console.log("case 1");
+        //       key = 1;
+        //     } else if (user.username !== enteredUsername) {
+        //       console.log("case 2");
+        //       key = 2;
+        //     } else if (user.PASSWORD !== enteredPassword) {
+        //       console.log("case 3");
+        //       key = 3;
+        //     } else if (user.mailid !== enteredmail) {
+        //       console.log("case 4");
+        //       key = 4;
+        //     } else {
+        //       console.log("case 5");
+        //       key = 5;
+        //     }
+        //   });
+
+          console.log("key is", key);
+
+          if (key == 1) {
+            console.log("Invalid username !");
+            document.getElementById("errorMessage").textContent =
+              "Invalid username";
+          } else if (key == 2) {
+            console.log("Invalid password!");
+            document.getElementById("errorMessage").textContent =
+              "Invalid password";
+          } else if (key == 3) {
+            console.log("Invalid mailid!");
+            document.getElementById("errorMessage").textContent =
+              "invalid mailid";
+          } else if (key == 4) {
+            console.log("Login successful!");
+            document.getElementById("errorMessage").textContent = ""; // Clear any previous error message
+            window.location.href = "webpage.html";
+          } else {
+            console.log("No user data found. Please sign up first.");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
